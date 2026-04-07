@@ -1,13 +1,32 @@
-<div class="login-container" id="loginBox">
-    <h2>CloudVitals Login</h2>
-    <input type="text" id="user" placeholder="Username">
-    <input type="password" id="pass" placeholder="Password">
-    <button onclick="login()">Login</button>
-    <p>Don't have an account? <a href="#">Sign up</a></p>
-</div>
-
-<div class="dashboard" id="mainDash" style="display:none;">
-    <h2>Welcome to Your Dashboard</h2>
-    <input type="text" id="serverIP" placeholder="Enter Remote Server IP">
-    <button onclick="checkHealth()">Scan Server</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudVitals | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="login-card">
+            <div class="logo">☁️ CloudVitals</div>
+            <h2>Welcome Back</h2>
+            <p>Monitor your servers with one click</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            
+            <div class="footer-links">
+                <span>New here? <a href="#">Create Account</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
