@@ -1,0 +1,13 @@
+<div class="login-container" id="loginBox">
+    <h2>CloudVitals Login</h2>
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+</div>
+
+<div class="dashboard" id="mainDash" style="display:none;">
+    <h2>Welcome to Your Dashboard</h2>
+    <input type="text" id="serverIP" placeholder="Enter Remote Server IP">
+    <button onclick="checkHealth()">Scan Server</button>
+</div>
