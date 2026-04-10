@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudVitals | Login</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/Style.css">
 </head>
-
 <body>
     <div class="main-wrapper">
         <div class="login-card">
-        <div class="logo">CloudVitals</div>
-        <h2>Welcome Back</h2>
-        <p>Monitor your servers with one click</p>
+            <div class="logo">CloudVitals</div>
+            <h2>Welcome Back</h2>
+            <p>Monitor your servers with one click</p>
 
-        <form id="loginForm">
-            <div class="input-group">
-            <input type="text" placeholder="Username" required>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" name="server_ip" placeholder="Server IP Address (e.g. 192.168.1.1)" required>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <div class="footer-Links">
+                <div class="forgot-pass">
+                <!-- <a href="#">Forgot Password?</a> -->
+                </div>
+                <br>
+                <span>New here? <a href="#">Create Account</a></span>
             </div>
-            <div class="input-group">
-                <input type="password" placeholder="Password" required>
-            </div>
-            <button type="submit" class="login-btn">Login</button>
-        </form>
-        <br>
-        <br>
-        <br>
-        <div class="footer-Links">
-            <span>New here? <a href="#">Create Account</a></span>
         </div>
     </div>
-    </div>
-
 </body>
 </html>

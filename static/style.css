@@ -5,7 +5,7 @@
     --card-bg: rgba(30, 41, 59, 0.7);
     --text-main: #f8fafc;
     --text-dim: #94a3b8;
-    --accent-yellow: #ffcc00; /* Bright Yellow */
+    --accent-yellow: #ffcc00; 
 }
 
 * {
@@ -27,7 +27,7 @@ body {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 50px 40px;
+    padding: 40px 40px; /* IP field aane se padding thodi kam ki hai */
     border-radius: 24px;
     width: 100%;
     max-width: 420px;
@@ -35,14 +35,12 @@ body {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
-/* 1. CloudVitals ka size kafi bada kiya */
-.logo { 
-    font-size: 60px; 
-    font-weight: 800;
+.logo {
+    font-size: 22px; 
+    font-weight: 700;
     color: var(--primary);
-    margin-bottom: 10px;
-    letter-spacing: -2px;
-    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 h2 { color: var(--text-main); font-size: 28px; margin-bottom: 10px; }
@@ -51,68 +49,64 @@ p { color: var(--text-dim); font-size: 15px; margin-bottom: 35px; }
 .input-group input {
     width: 100%;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Margin 20 se 15 ki taaki space bache */
     background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     color: white;
     outline: none;
 }
+.input-group a{
+    color:white;
+    text-decoration: underline;
+    font-weight: 50;
+    font-size: 14px;
+    display:block;
+    text-align: right;
+    margin-top:-10px;
+    margin-bottom: 15px;
+    margin-left: 5px;
 
-/* 1. Login Button: Black Background, Yellow Text, and Bigger Size */
+}
+
 .login-btn {
-    width: 40%;
-    height:35px;
-    padding: 10px; /* Pehle se thoda aur bada kiya */
-   background-color: #1f2331; /* Ekdum Black Background */
-    color: #ffcc00; /* Bright Yellow Text */
-    border: 2px solid #ffcc00; /* Yellow Border taaki black par dikhe */
+    width: 50%; /* 40% se thoda bada kiya taaki text fit aaye */
+    height: 40px;
+    background-color: #1f2331;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
     border-radius: 12px;
-    font-size: 15px; /* Font size bhi bada kiya */
-    font-weight: 700; /* Extra Bold */
-    text-transform: uppercase; /* Saare letters bade */
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
     transition: 0.3s;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
 }
 
 .login-btn:hover {
-    background-color: #ffcc00; /* Hover karne par colors swap ho jayenge */
-    
-    transform: scale(1.03); /* Thoda sa zoom effect */
+    background-color: #ffcc00;
+    color: #1f2331; /* Hover par text black ho jayega */
+    transform: scale(1.03);
 }
 
+/* --- Forgot Password aur Footer ka naya Part --- */
 
-/* 2. CloudVitals Logo: Size aur bada kiya */
-.logo {
-    font-size: 22px; /* Ab ye ekdum bold aur bada dikhega */
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-    
-}
-
-/* 2. New here wali line kafi niche shift ki */
 .footer-Links {
-    margin-top: 5px; 
-    font-size: 20px;
+    margin-top: 20px; 
     color: white;
 }
 
-/* 3. Create Account ka color Yellow kiya */
+
+.footer-Links span {
+    font-size: 15px;
+}
+
 .footer-Links a {
-    color:var(--primary);
+    color: var(--primary);
     text-decoration: underline;
     font-weight: 700;
     margin-left: 5px;
 }
 
-.footer-Links a:hover {
-    text-decoration: underline;
-}
+
