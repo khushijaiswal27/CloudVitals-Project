@@ -3,25 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudVitals | Home</title>
-    <link rel="stylesheet" href="/static/homestyle.css"
+    <title>CloudVitals | Smart Server Monitoring</title>
+    <link rel="stylesheet" href="/static/homestyle.css"> 
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="login-card" style="max-width: 600px;"> <div class="logo">CloudVitals</div>
-            <h2>Smart Server Monitoring</h2>
-            <p>Track your server health, CPU usage, and RAM stats in real-time with our powerful dashboard.</p>
-            
-            <div class="features-grid" style="display: flex; gap: 10px; margin-bottom: 30px; text-align: left;">
-                <div style="font-size: 12px; color: var(--text-dim); border: 1px solid #444; padding: 10px; border-radius: 8px;">🚀 Fast Stats</div>
-                <div style="font-size: 12px; color: var(--text-dim); border: 1px solid #444; padding: 10px; border-radius: 8px;">🔒 Secure Login</div>
-                <div style="font-size: 12px; color: var(--text-dim); border: 1px solid #444; padding: 10px; border-radius: 8px;">📊 Live Graphs</div>
+    <div class="site-wrapper">
+        
+        <header class="navbar">
+            <div class="container">
+                <div class="logo">CloudVitals</div>
+                <nav class="nav-links">
+                    <a href="/login" class="nav-btn">Login & Monitor</a>
+                </nav>
             </div>
+        </header>
 
-            <a href="/login" class="login-btn" style="text-decoration: none; display: inline-flex; width: auto; padding: 10px 30px;">
-                Get Started
-            </a>
-        </div>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Monitor. Manage. <span class="highlight">Analyze</span>.</h1>
+                <p>Track your server health, performance, and usage in real-time. CloudVitals makes server monitoring simple, smart, and secure.</p>
+                
+                <a href="/login" class="hero-get-started-btn">
+                    Get Started Free <span>&rarr;</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Why CloudVitals?</h2>
+                <p class="section-subtitle">Powerful tools to keep your infrastructure healthy.</p>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="icon-circle">🚀</div>
+                        <h3>Fast Stats</h3>
+                        <p>Real-time updates on CPU, RAM, and Disk space for your registered servers.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon-circle">📊</div>
+                        <h3>Visual Graphs</h3>
+                        <p>Easily understand complex data through simple and dynamic charts.</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon-circle">🔒</div>
+                        <h3>Secure Shell</h3>
+                        <p>Seamlessly connect via SSH to execute monitoring scripts safely.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2026 CloudVitals. Minor Project by Khushi.</p>
+            </div>
+        </footer>
+
     </div>
 </body>
 </html>
