@@ -23,6 +23,32 @@ body {
     align-items: center;
 }
 
+/* .main-wrapper {
+    width:450px;
+
+} */
+.main-wrapper {
+    width:450px;
+    display: flex;
+    flex-direction: column; /* Ise column karo taaki link upar aur card niche aaye */
+    align-items: center;
+}
+
+.back-home {
+    align-self: flex-start; /* Isse link left side mein rahega */
+    margin-bottom: 20px;    /* Card aur link ke beech gap */
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: var(--secondary);
+    transform: translateX(-5px); /* Hover par thoda left move hoga */
+}
+
 .login-card { 
     background: var(--card-bg);
     backdrop-filter: blur(12px);
