@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudVitals | Dashboard</title>
+    <link rel="stylesheet" href="/static/dashboard-style.css">
+</head>
+<body>
+    <div class="dash-wrapper">
+        <aside class="sidebar">
+            <div class="logo">CloudVitals</div>
+            <nav>
+                <a href="#" class="active">📊 Overview</a>
+                <a href="#">🖥️ My Servers</a>
+                <a href="#">⚙️ Settings</a>
+                <a href="/" class="logout">🚪 Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h2>Welcome, <span class="user-highlight">{{ username }}</span></h2>
+                <div class="server-badge">Monitoring: {{ ip }}</div>
+            </header>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>CPU Usage</h3>
+                    <div class="value">24%</div>
+                    <div class="progress-bar"><div class="fill" style="width: 24%"></div></div>
+                </div>
+                <div class="stat-card">
+                    <h3>RAM Usage</h3>
+                    <div class="value">1.2 GB</div>
+                    <div class="progress-bar"><div class="fill" style="width: 45%"></div></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Disk Space</h3>
+                    <div class="value">80 GB</div>
+                    <div class="progress-bar"><div class="fill" style="width: 70%"></div></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Uptime</h3>
+                    <div class="value">12d 4h</div>
+                    <p>Server is stable</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Real-time Performance</h3>
+                <div class="fake-chart">
+                    <p>Live Graphs will be integrated here...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
