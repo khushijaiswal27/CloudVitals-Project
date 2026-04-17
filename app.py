@@ -28,22 +28,30 @@ def home():
 
 # 2. 'methods' mein GET aur POST dono dale hain
 @app.route('/login', methods=['GET', 'POST'])
-def login_page():
+def login_page(): 
+    print(f"Request Method: {request.method}")
     if request.method == 'POST':
         # 3. HTML ke 'name' attribute se data nikal rahe hain
         user = request.form.get('username')
-        ip = request.form.get('server_ip')
+        ip = request.form.get('server_ip') 
         
         # 4. Ye tumhare VS Code ke Terminal mein dikhega
-        print(f"\n--- Data Received from Frontend ---")
-        print(f"Username: {user}")
-        print(f"IP Address: {ip}")
-        print(f"-----------------------------------\n")
-        
-        return f"<h1>Success!</h1><p>Khushi, humne '{user}' aur IP '{ip}' pakad liya hai. Terminal check karo!</p>"
+        # print(f"\n--- Data Received from Frontend ---")
+        # print(f"Username: {user}")
+        # print(f"IP Address: {ip}")
+        # print(f"-----------------------------------\n")
 
-    # Agar normal page khul raha hai (GET), toh sirf form dikhao
+        # Terminal mein check krne k liye print kro
+        print(f"User {user} is logging in for server: {ip}")
+
+        # Yaha 'dashboard.html' ko link kar rhe hain
+        # Hum 'username' aur 'ip' ko variable ke roop mein bhej rhe hai
+        return render_template('dashboard.html', username=user, ip=ip)
+        
+        # return f"<h1>Success!</h1><p>'{user}' aur IP '{ip}'!</p>"
+
+    # Agar user sirf page visit kar raha hai (GET), toh login form dikhao 
     return render_template('Login.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)  
