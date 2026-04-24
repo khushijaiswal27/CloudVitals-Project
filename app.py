@@ -28,8 +28,7 @@ def home():
 
 # 2. 'methods' mein GET aur POST dono dale hain
 @app.route('/login', methods=['GET', 'POST'])
-def login_page(): 
-    print(f"Request Method: {request.method}")
+def login_page():
     if request.method == 'POST':
         # 3. HTML ke 'name' attribute se data nikal rahe hain
         user = request.form.get('username')
