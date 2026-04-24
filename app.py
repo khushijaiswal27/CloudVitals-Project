@@ -42,6 +42,7 @@ def login_page():
         # print(f"-----------------------------------\n")
 
         # Terminal mein check krne k liye print kro
+        print("REACHED INSIDE LOGIN ROUTE")
         print(f"User {user} is logging in for server: {ip}")
 
         # Yaha 'dashboard.html' ko link kar rhe hain
