@@ -46,7 +46,7 @@ def login_page():
 
         # Yaha 'dashboard.html' ko link kar rhe hain
         # Hum 'username' aur 'ip' ko variable ke roop mein bhej rhe hai
-        return render_template('dashboard.html', username=user, ip=ip)
+        return render_template('dashboard.html', username=user, ip=ip, metrics={})
         
         # return f"<h1>Success!</h1><p>'{user}' aur IP '{ip}'!</p>"
 
