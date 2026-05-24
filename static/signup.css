@@ -1,0 +1,116 @@
+/* Global Styles */
+body {
+    background-color: #0b0e14;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container styling matching your 'Welcome Back' UI */
+.signup-container {
+    background-color: #161b22;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 440px;
+    border: 1px solid #30363d;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.brand-name {
+    color: #58a6ff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.welcome-text {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+/* Form Layout */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    color: #c9d1d9;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #58a6ff;
+}
+
+/* Button with the gold border matching your 'LOGIN' button */
+.signup-btn {
+    margin-top: 1rem;
+    padding: 0.9rem;
+    background-color: transparent;
+    border: 2px solid #f9c311;
+    color: #f9c311;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #f9c311;
+    color: #0d1117;
+    box-shadow: 0 0 15px rgba(249, 195, 17, 0.4);
+}
+
+/* Footer Links */
+.footer-links {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+.footer-links a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.back-home {
+    margin-top: 1rem;
+}
