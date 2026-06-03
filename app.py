@@ -95,9 +95,10 @@ def home():
 def signup():
     if request.method == 'POST':
         user = request.form.get('username')
-        ip = request.form.get('server_ip')
+        # ip = request.form.get('server_ip')
+        email = request.form.get('email')
         pwd = request.form.get('password')
-        #email = request.form.get('email')
+        
 
         # Check if username is already taken
         existing_user = User.query.filter_by(username=user).first()
@@ -106,8 +107,9 @@ def signup():
 
         # Save new user with a secure hashed password
         hashed_pw = generate_password_hash(pwd)
-        new_entry = User(username=user, server_ip=ip, password=hashed_pw)
-        
+        # new_entry = User(username=user, server_ip=ip, password=hashed_pw)
+        new_entry = User(username=user, email=email, password=hashed_pw)
+
         db.session.add(new_entry)
         db.session.commit()
         
