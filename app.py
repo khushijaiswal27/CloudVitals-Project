@@ -61,12 +61,14 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
+import os
 
 app = Flask(__name__)
 
 # --- Database Configuration ---
 # This creates a 'cloudvitals.db' file in your project folder
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cloudvitals.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///cloudvitals.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///cloudvitals.db').replace('postgres://', 'postgresql://', 1)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'cloudvitals_key_2026' 
 
@@ -140,3 +142,11 @@ def login_page():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/check-my-tables')
+def check_my_tables():
+    # Database se saari tables ke naam nikalne ke liye
+    with app.app_context():
+        inspector = db.inspect(db.engine)
+        tables = inspector.get_table_names()
+    return f"<h1>Aapki Database Tables:</h1><p>{', '.join(tables)}</p>"
